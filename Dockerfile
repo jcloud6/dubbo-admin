@@ -5,7 +5,7 @@ ADD server.xml /usr/local/tomcat6/conf/server.xml
 ADD demo.war  /code/
 
 ### install ###
-RUN mkdir -p $CATALINA_HOME/webapps/
+RUN mkdir -p $CATALINA_HOME/webapps/ && rm -rf $CATALINA_HOME/webapps/*
 RUN cp /code/demo.war $CATALINA_HOME/webapps/
 
 ### run ###
