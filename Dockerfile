@@ -1,4 +1,3 @@
-
 FROM tomcat:6
 
 WORKDIR /code
