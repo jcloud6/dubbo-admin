@@ -1,4 +1,4 @@
-FROM java-mysql-demo-base:latest
+FROM ring2016/centos6-jdk7-maven3
 
 WORKDIR /code
 ADD server.xml /usr/local/tomcat6/conf/server.xml
