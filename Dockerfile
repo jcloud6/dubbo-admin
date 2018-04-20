@@ -1,6 +1,6 @@
 FROM ring2016/centos6-jdk7-maven3
 
-RUN yum update && yum -y install zip
+RUN yum -y update && yum -y install zip
 
 WORKDIR /code
 ADD server.xml /usr/local/tomcat6/conf/server.xml
