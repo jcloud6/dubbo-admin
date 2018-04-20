@@ -8,13 +8,14 @@ RUN rm -rf /code/*
 ADD server.xml /usr/local/tomcat/conf/server.xml
 ADD demo.war  /code/
 #RUN cp /code/demo.war $CATALINA_HOME/webapps/
-RUN unzip demo.war
-RUN rm -f /code/demo.war
+#RUN unzip demo.war
+#RUN rm -f /code/demo.war
 
 ### install ###
-#RUN rm -rf /usr/local/tomcat/webapps/*
+RUN rm -rf /usr/local/tomcat/webapps/*
 #RUN mkdir -p /usr/local/tomcat/webapps/ROOT
-RUN cp -rf /code/* /usr/local/tomcat/webapps/ROOT/
+#RUN cp -rf /code/* /usr/local/tomcat/webapps/ROOT/
+RUN cp /code/demo.war /usr/local/tomcat/webapps/ROOT.war
 
 ### run ###
 EXPOSE 80
