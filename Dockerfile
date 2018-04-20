@@ -12,8 +12,8 @@ RUN unzip dubbo-admin-2.5.3.war
 RUN rm -f /code/dubbo-admin-2.5.3.war
 
 ### install ###
-RUN rm -rf /usr/local/tomcat/webapps/*
-RUN mkdir -p /usr/local/tomcat/webapps/ROOT
+#RUN rm -rf /usr/local/tomcat/webapps/*
+#RUN mkdir -p /usr/local/tomcat/webapps/ROOT
 RUN cp -rf /code/* /usr/local/tomcat/webapps/ROOT/
 
 ### run ###
