@@ -1,11 +1,11 @@
-FROM tomcat:6
+FROM ring2016/centos6-jdk7-maven3
 
 WORKDIR /code
 ADD server.xml /usr/local/tomcat6/conf/server.xml
-ADD demo.war  /code/
+ADD dubbo-admin-2.5.3.war  /code/
 #RUN cp /code/demo.war $CATALINA_HOME/webapps/
-RUN unzip demo.war
-RUN rm -f /code/demo.war
+RUN unzip dubbo-admin-2.5.3.war
+RUN rm -f /code/dubbo-admin-2.5.3.war
 
 ### install ###
 RUN rm -rf $CATALINA_HOME/webapps/*
