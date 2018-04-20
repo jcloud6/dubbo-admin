@@ -15,7 +15,7 @@ ADD demo.war  /code/
 RUN rm -rf /usr/local/tomcat/webapps/*
 #RUN mkdir -p /usr/local/tomcat/webapps/ROOT
 #RUN cp -rf /code/* /usr/local/tomcat/webapps/ROOT/
-RUN cp /code/demo.war /usr/local/tomcat/webapps/ROOT.war
+RUN cp /code/demo.war /usr/local/tomcat/webapps/
 
 ### run ###
 EXPOSE 80

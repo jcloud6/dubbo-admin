@@ -128,7 +128,9 @@
       <Host name="localhost"  appBase="webapps"
             unpackWARs="true" autoDeploy="true"
             xmlValidation="false" xmlNamespaceAware="false">
-
+        <Context path="/" docBase="demo">
+            <WatchedResource>WEB-INF/web.xml</WatchedResource>
+        </Context>
         <!-- SingleSignOn valve, share authentication between web applications
              Documentation at: /docs/config/valve.html -->
         <!--
