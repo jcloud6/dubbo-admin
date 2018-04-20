@@ -13,7 +13,7 @@ RUN rm -f /code/dubbo-admin-2.5.3.war
 
 ### install ###
 RUN rm -rf /usr/local/tomcat6/webapps/*
-RUN mkdir -p /usr/local/tomcat6//webapps/ROOT
+RUN mkdir -p /usr/local/tomcat6/webapps/ROOT
 RUN cp -rf /code/* /usr/local/tomcat6/webapps/ROOT/
 
 ### run ###
