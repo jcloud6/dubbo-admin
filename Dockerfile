@@ -1,22 +1,18 @@
-FROM tomcat:6
-#FROM ring2016/centos6-jdk7-maven3
-
-#RUN yum -y update && yum -y install unzip
+FROM tomcat:7
 
 WORKDIR /code
 RUN rm -rf /code/*
-ADD server.xml /usr/local/tomcat/conf/server.xml
-ADD demo.war  /code/
-#RUN cp /code/demo.war $CATALINA_HOME/webapps/
-#RUN unzip demo.war
-#RUN rm -f /code/demo.war
+
+COPY dubbo-admin-2.5.10.war  /code/
+
+RUN unzip dubbo-admin-2.5.10.war
+RUN ls -hl /code/
 
 ### install ###
 RUN rm -rf /usr/local/tomcat/webapps/*
-#RUN mkdir -p /usr/local/tomcat/webapps/ROOT
-#RUN cp -rf /code/* /usr/local/tomcat/webapps/ROOT/
-RUN cp /code/demo.war /usr/local/tomcat/webapps/
+RUN mkdir -p /usr/local/tomcat/webapps/ROOT
+RUN cp -rf /code/* /usr/local/tomcat/webapps/ROOT/
 
 ### run ###
-EXPOSE 80
+EXPOSE 8080
 CMD ["catalina.sh", "run"]
