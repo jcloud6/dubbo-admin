@@ -5,6 +5,6 @@ set -x
 
 source config.sh
 
-docker build  -t ${REGISTRY}/dubbo:admin ./
+docker build  --no-cache -t ${REGISTRY}/dubbo:admin ./
 
 docker push ${REGISTRY}/dubbo:admin
