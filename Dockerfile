@@ -4,10 +4,7 @@ WORKDIR /code
 RUN rm -rf /code/*
 
 COPY dubbo-admin-2.5.10.war  /code/
-
 RUN unzip dubbo-admin-2.5.10.war
-
-
 RUN ls -hl /code/
 
 ### install ###
