@@ -3,9 +3,11 @@ FROM tomcat:7
 WORKDIR /code
 RUN rm -rf /code/*
 
-COPY dubbo-admin-2.5.3.war  /code/
+COPY dubbo-admin-2.5.10.war  /code/
 
-RUN unzip dubbo-admin-2.5.3.war
+RUN unzip dubbo-admin-2.5.10.war
+
+
 RUN ls -hl /code/
 
 ### install ###
